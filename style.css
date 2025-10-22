@@ -170,10 +170,13 @@ section {
   margin: 2em auto 0;
 }
 header {
-  position: relative;
+  gap: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
 }
-header div {
+header .flex {
   padding: 2em;
+  flex-wrap: wrap;
   position: relative;
   border: 5px dashed #cd0000;
 }
@@ -193,6 +196,7 @@ main {
 }
 section {
   width: 100%;
+  padding: 0 2em;
 }
 p {
   padding: 1em 0 0 0;
@@ -212,12 +216,21 @@ ul.help li {
   list-style-type: none;
   list-style-position: inside;
 }
-.dogs figure {
-  margin: 2em 0 0;
+.flex {
+  gap: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.adopt,
+.dogs {
+  gap: 2em 1%;
+  flex-wrap: wrap;
+  margin: 2em 0 0 0;
+  justify-content: space-between;
+}
 .contact {
   margin: 2em 0 0 0;
+  align-items: flex-start;
 }
 footer {
   padding: 2em 0;
@@ -227,114 +240,98 @@ footer {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   /* CSS rules for extra small screens */
+  .flex {
+    flex-direction: column;
+  }
+  .dogs.flex {
+    flex-direction: row;
+  }
+  .contact div {
+    width: 100%;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px to 768px) */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   /* CSS rules for small screens */
+  .flex {
+    flex-direction: column;
+  }
+  .dogs.flex {
+    flex-direction: row;
+  }
   .dogs figure {
-    max-width: 46%;
-    margin: 2em 1.5% 0;
-    display: inline-block;
+    max-width: 48%;
+  }
+  .contact div {
+    width: 100%;
   }
 }
 /* Medium devices (landscape tablets, 768px to 992px) */
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   /* CSS rules for medium screens */
   header figure {
-    height: 55vh;
     overflow: hidden;
+    max-height: 500px;
+  }
+  header figcaption {
+    top: 1em;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .dogs.flex {
+    flex-direction: row;
   }
   .dogs figure {
     max-width: 32%;
-    margin: 2em 0 0;
-    display: inline-block;
   }
-  .dogs figure:nth-child(2),
-  .dogs figure:nth-child(5) {
-    margin: 2em 1% 0;
+  .contact div {
+    width: 100%;
   }
 }
 /* Large devices (laptops/desktops, 992px to 1200px) */
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
   /* CSS rules for large screens */
+  section {
+    padding: 0;
+  }
+  header {
+    grid-template-columns: 40% auto;
+  }
   header figure {
-    width: 40%;
-    height: 40vh;
     overflow: hidden;
     max-height: 300px;
-    position: absolute;
   }
   header figcaption {
     top: 1em;
   }
-  header div {
-    height: 40vh;
-    max-height: 300px;
-    left: calc(40% + 1em);
-    width: calc(60% - 1em);
-  }
   .dogs figure {
     max-width: 32%;
-    margin: 2em 0 0;
-    display: inline-block;
   }
-  .dogs figure:nth-child(2),
-  .dogs figure:nth-child(5) {
-    margin: 2em 1.5% 0;
-  }
-  .adopt {
-    padding: 0 0 0 2%;
-  }
-  .contact {
-    padding: 0 2% 0 0;
-  }
-  .adopt,
-  .contact {
-    width: 46%;
-    margin: 2em 0 0 0;
-    vertical-align: top;
-    display: inline-block;
+  .contact div {
+    width: 50%;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (min-width: 1201px) {
   /* CSS rules for extra large screens */
+  section {
+    padding: 0;
+  }
+  header {
+    grid-template-columns: 1fr 1fr;
+  }
   header figure {
-    width: 50%;
-    height: 50vh;
     overflow: hidden;
     max-height: 350px;
-    position: absolute;
   }
   header figcaption {
     top: 1em;
   }
-  header div {
-    height: 50vh;
-    max-height: 350px;
-    left: calc(50% + 1em);
-    width: calc(50% - 1em);
-  }
   .dogs figure {
     max-width: 32%;
-    margin: 2em 0 0;
-    display: inline-block;
   }
-  .dogs figure:nth-child(2),
-  .dogs figure:nth-child(5) {
-    margin: 2em 1% 0;
-  }
-  .adopt {
-    padding: 0 0 0 2%;
-  }
-  .contact {
-    padding: 0 2% 0 0;
-  }
-  .adopt,
-  .contact {
-    width: 46%;
-    margin: 2em 0 0 0;
-    vertical-align: top;
-    display: inline-block;
+  .contact div {
+    width: 50%;
   }
 }

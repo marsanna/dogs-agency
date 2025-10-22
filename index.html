@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <header>
+    <header class="grid">
       <figure>
         <figcaption>Dog Adoption Agency</figcaption>
         <img
@@ -17,13 +17,16 @@
           alt="Dog Adoption Agency"
         />
       </figure>
-      <div>
-        <h1>Echte Freundschaft ist nur ein Klick entfernt</h1>
-        <p>
-          Bei uns findest du treue Seelen, die sehnsüchtig auf ein neues Zuhause
-          warten. Vom verspielten Welpen bis zum ruhigen Seniorhund – jeder Hund
-          hat seine eigene Geschichte und verdient ein liebevolles Zuhause.
-        </p>
+      <div class="flex">
+        <div>
+          <h1>Echte Freundschaft ist nur ein Klick entfernt</h1>
+          <p>
+            Bei uns findest du treue Seelen, die sehnsüchtig auf ein neues
+            Zuhause warten. Vom verspielten Welpen bis zum ruhigen Seniorhund –
+            jeder Hund hat seine eigene Geschichte und verdient ein liebevolles
+            Zuhause.
+          </p>
+        </div>
       </div>
     </header>
     <main>
@@ -58,7 +61,7 @@
           Informationen zu Charakter, Verhalten, Alter, Größe und besonderen
           Bedürfnissen.
         </p>
-        <div class="dogs">
+        <div class="dogs flex">
           <figure>
             <figcaption>Balu</figcaption>
             <img
@@ -142,8 +145,8 @@
           Du möchtest mehr über einen bestimmten Hund wissen oder hast Fragen
           zur Adoption? Kontaktiere uns gerne.
         </p>
-        <div>
-          <div class="contact">
+        <div class="contact flex">
+          <div>
             <h3>Fragen? Wir sind für dich da.</h3>
             <form method="get">
               <label for="user_name">Name</label>
@@ -157,7 +160,7 @@
               <button type="submit">Abschicken</button>
             </form>
           </div>
-          <div class="adopt">
+          <div>
             <h3>Adoption – so funktioniert’s.</h3>
             <p><b>Ein Hund zieht ein – gut überlegt und begleitet</b></p>
             <ul>
