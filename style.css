@@ -1,0 +1,340 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #242424;
+  -webkit-font-smoothing: antialiased;
+  font-family: Arial, Helvetica, sans-serif;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+input,
+button,
+select,
+textarea {
+  width: 100%;
+  font: inherit;
+  display: block;
+}
+form {
+  padding: 1em;
+  margin: 1em 0 0 0;
+  border: 5px dashed #cd0000;
+}
+button {
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  margin: 1em 0 0 0;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  background-color: #cd0000;
+}
+button:hover {
+  background-color: #242424;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  text-wrap: balance;
+}
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 175%;
+}
+h3 {
+  font-size: 150%;
+}
+main,
+header,
+footer,
+figure,
+section {
+  width: 98%;
+  display: block;
+  max-width: 1158px;
+  margin: 2em auto 0;
+}
+header {
+  position: relative;
+}
+header div {
+  padding: 2em;
+  position: relative;
+  border: 5px dashed #cd0000;
+}
+figure {
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+figcaption {
+  left: 1em;
+  bottom: 1em;
+  color: #ffffff;
+  position: absolute;
+}
+main {
+  margin: 0 auto;
+}
+section {
+  width: 100%;
+}
+p {
+  padding: 1em 0 0 0;
+}
+ul {
+  padding: 1em 0 0 1em;
+}
+ul li {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+ul.help {
+  padding: 1em 0 0 0;
+}
+ul.help li {
+  padding: 0.5em 0 0 0;
+  list-style-type: none;
+  list-style-position: inside;
+}
+.dogs figure {
+  margin: 2em 0 0;
+}
+.adopt,
+.contact {
+  margin: 2em 0 0 0;
+}
+footer {
+  padding: 2em 0;
+  text-align: center;
+  border-top: 1px solid #242424;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* CSS rules for extra small screens */
+}
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  /* CSS rules for small screens */
+  .dogs figure {
+    max-width: 46%;
+    margin: 2em 1.5% 0;
+    display: inline-block;
+  }
+}
+/* Medium devices (landscape tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* CSS rules for medium screens */
+  header figure {
+    height: 55vh;
+    overflow: hidden;
+  }
+  .dogs figure {
+    max-width: 32%;
+    margin: 2em 0 0;
+    display: inline-block;
+  }
+  .dogs figure:nth-child(2),
+  .dogs figure:nth-child(5) {
+    margin: 2em 1% 0;
+  }
+}
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  /* CSS rules for large screens */
+  header figure {
+    width: 40%;
+    height: 40vh;
+    overflow: hidden;
+    max-height: 300px;
+    position: absolute;
+  }
+  header figcaption {
+    top: 1em;
+  }
+  header div {
+    height: 40vh;
+    max-height: 300px;
+    left: calc(40% + 1em);
+    width: calc(60% - 1em);
+  }
+  .dogs figure {
+    max-width: 32%;
+    margin: 2em 0 0;
+    display: inline-block;
+  }
+  .dogs figure:nth-child(2),
+  .dogs figure:nth-child(5) {
+    margin: 2em 1.5% 0;
+  }
+  .adopt {
+    padding: 0 0 0 2%;
+  }
+  .contact {
+    padding: 0 2% 0 0;
+  }
+  .adopt,
+  .contact {
+    width: 46%;
+    margin: 2em 0 0 0;
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) {
+  /* CSS rules for extra large screens */
+  header figure {
+    width: 50%;
+    height: 50vh;
+    overflow: hidden;
+    max-height: 350px;
+    position: absolute;
+  }
+  header figcaption {
+    top: 1em;
+  }
+  header div {
+    height: 50vh;
+    max-height: 350px;
+    left: calc(50% + 1em);
+    width: calc(50% - 1em);
+  }
+  .dogs figure {
+    max-width: 32%;
+    margin: 2em 0 0;
+    display: inline-block;
+  }
+  .dogs figure:nth-child(2),
+  .dogs figure:nth-child(5) {
+    margin: 2em 1% 0;
+  }
+  .adopt {
+    padding: 0 0 0 2%;
+  }
+  .contact {
+    padding: 0 2% 0 0;
+  }
+  .adopt,
+  .contact {
+    width: 46%;
+    margin: 2em 0 0 0;
+    vertical-align: top;
+    display: inline-block;
+  }
+}
